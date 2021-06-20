@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "89688250-ef68-41af-aefe-c4b32feb4cfd",
+		"name": "Stock-standalone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Stock Info Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/stock/get/cts/01-01-2020/31-01-2020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"stock",
+						"get",
+						"cts",
+						"01-01-2020",
+						"31-01-2020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Company Stocks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"stockPrice\": 12.34\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/stock/add/cts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"stock",
+						"add",
+						"cts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Stocks By CompnayCode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"stockPrice\": 12.34\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/stock/add/cts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"stock",
+						"add",
+						"cts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

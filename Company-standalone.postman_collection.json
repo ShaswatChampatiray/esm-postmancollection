@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "6f425ac1-2de5-495d-9bbe-12aeb97f8bba",
+		"name": "Company-standalone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll Companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/company/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"company",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register New Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"companyCode\": \"cts\",\r\n\"companyName\": \"Cognizant\",\r\n\"companyCEO\": \"Brian\",\r\n\"companyTurnover\": 1000000000,\r\n\"companyWebsite\": \"https://becognizant.com\",\r\n\"stockExchange\": \"NASDAQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/company/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company Info by Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/company/info/cts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"company",
+						"info",
+						"cts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Company by Code",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/company/delete/cts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"company",
+						"delete",
+						"cts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

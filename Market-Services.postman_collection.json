@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "df04f1bd-b96b-4fa8-b673-a1c589bf6d6f",
+		"name": "Market-Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/company/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register New Company",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"companyCode\": \"myco\",\r\n\"companyName\": \"MyCompany\",\r\n\"companyCEO\": \"Saswata\",\r\n\"companyTurnover\": 1000000000,\r\n\"companyWebsite\": \"https://MyCompany.com\",\r\n\"stockExchange\": \"BSE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/company/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company Info by Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/company/info/cts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"info",
+						"cts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Company Info",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/company/delete/myco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"delete",
+						"myco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Company Stocks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"stockPrice\": 12.34\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/stock/add/cts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"stock",
+						"add",
+						"cts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stock Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1.0/market/stock/get/cts/01-01-2020/31-01-2020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"stock",
+						"get",
+						"cts",
+						"01-01-2020",
+						"31-01-2020"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
